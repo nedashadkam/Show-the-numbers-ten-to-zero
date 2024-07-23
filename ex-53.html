@@ -1,0 +1,60 @@
+<!-- یه متد بازگشتی بنویس که از 10 شرو کنه بنویسه تا 0 -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        div {
+            background-color: aliceblue;
+            width: 15%;
+            padding: 2.5%;
+            margin-left: 40%;
+            border: 1px solid navy;
+            border-radius: 5px;
+            margin-top: 20vh;
+        }
+
+        button {
+            background-color: cadetblue;
+            border: 1px solid cadetblue;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+        <button onclick="output(10)">Show the numbers ten to zero</button>
+
+        <p id="demo"></p>
+
+    </div>
+
+
+    <script>
+
+        let sum = "";
+        function output(number) {
+
+            if (number > 0) {
+
+                sum += number + '<br>';
+                output(number - 1);
+
+            }
+
+            document.getElementById("demo").innerHTML = sum;
+        }
+
+    </script>
+
+</body>
+
+</html>
